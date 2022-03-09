@@ -2,13 +2,31 @@
   "name": "tuka-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "ts-node": "ts-node --compiler-options {\"module\": \"commonJS\"}"
   },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
+  "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "express": "^4.17.3"
+    "@prisma/client": "^3.10.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "http-errors": "^2.0.0",
+    "morgan": "^1.10.0",
+    "passport": "^0.5.2",
+    "passport-jwt": "^4.0.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^6.0.0-alpha.7",
+    "nodemon": "^2.0.15",
+    "prisma": "^3.10.0"
   }
 }
